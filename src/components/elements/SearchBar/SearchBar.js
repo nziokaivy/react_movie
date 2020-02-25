@@ -12,7 +12,7 @@ class SearchBar extends Component {
         this.setState({value: event.target.value});
         clearTimeout(this.timeout);
 
-        this.timeout = setTimeout(()=> {
+        this.timeout = setTimeout( () => {
             this.props.callback(this.state.value);
         }, 500);
     }
@@ -25,12 +25,13 @@ class SearchBar extends Component {
                     <input 
                     type="text"
                     className="rmdb-searchbar-input"
-                    placeholder="search"
+                    placeholder="Search"
                     onChange={this.doSearch}
                     value={this.state.value}
                     />
                 </div>
             </div>
+
         )
     }
 }
